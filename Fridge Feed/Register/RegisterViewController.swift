@@ -52,8 +52,8 @@ class RegisterViewController: UIViewController {
                          email: email,
                          name: name,
                          completionHandler: { [weak self] in
-                            let registerVC = HomeViewController()
-                            self?.navigationController?.pushViewController(registerVC, animated: true)
+                            let homeVC = HomeViewController()
+                            self?.navigationController?.viewControllers = [homeVC]
             }, errorHandler: handleError)
     }
     

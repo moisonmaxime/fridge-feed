@@ -27,6 +27,16 @@
 		1B3B1BB921B4711D0007ECF2 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3B1BB721B4711D0007ECF2 /* RegisterViewController.swift */; };
 		1B3B1BBD21B473AE0007ECF2 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B3B1BBB21B473AE0007ECF2 /* HomeViewController.xib */; };
 		1B3B1BBE21B473AE0007ECF2 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3B1BBC21B473AE0007ECF2 /* HomeViewController.swift */; };
+		1B3B1BC121B47D5F0007ECF2 /* ContainerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B3B1BBF21B47D5F0007ECF2 /* ContainerCell.xib */; };
+		1B3B1BC221B47D5F0007ECF2 /* ContainerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3B1BC021B47D5F0007ECF2 /* ContainerCell.swift */; };
+		1B3B1BC621B48A990007ECF2 /* ContainerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B3B1BC421B48A990007ECF2 /* ContainerViewController.xib */; };
+		1B3B1BC721B48A990007ECF2 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3B1BC521B48A990007ECF2 /* ContainerViewController.swift */; };
+		1B3B1BCA21B4993A0007ECF2 /* FridgeItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B3B1BC821B4993A0007ECF2 /* FridgeItemCell.xib */; };
+		1B3B1BCB21B4993A0007ECF2 /* FridgeItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3B1BC921B4993A0007ECF2 /* FridgeItemCell.swift */; };
+		1B3B1BCF21B49F0C0007ECF2 /* NewContainerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B3B1BCD21B49F0C0007ECF2 /* NewContainerViewController.xib */; };
+		1B3B1BD021B49F0C0007ECF2 /* NewContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3B1BCE21B49F0C0007ECF2 /* NewContainerViewController.swift */; };
+		1B3B1BD321B4A1830007ECF2 /* NewItemViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B3B1BD121B4A1830007ECF2 /* NewItemViewController.xib */; };
+		1B3B1BD421B4A1830007ECF2 /* NewItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3B1BD221B4A1830007ECF2 /* NewItemViewController.swift */; };
 		1B530F4E21B2566E0086B639 /* Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B530F4921B2566E0086B639 /* Animation.swift */; };
 		1B530F4F21B2566E0086B639 /* FadingAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B530F4A21B2566E0086B639 /* FadingAnimation.swift */; };
 		1B530F5021B2566E0086B639 /* InteractiveTransitioner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B530F4B21B2566E0086B639 /* InteractiveTransitioner.swift */; };
@@ -57,6 +67,16 @@
 		1B3B1BB721B4711D0007ECF2 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		1B3B1BBB21B473AE0007ECF2 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		1B3B1BBC21B473AE0007ECF2 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		1B3B1BBF21B47D5F0007ECF2 /* ContainerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContainerCell.xib; sourceTree = "<group>"; };
+		1B3B1BC021B47D5F0007ECF2 /* ContainerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerCell.swift; sourceTree = "<group>"; };
+		1B3B1BC421B48A990007ECF2 /* ContainerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContainerViewController.xib; sourceTree = "<group>"; };
+		1B3B1BC521B48A990007ECF2 /* ContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
+		1B3B1BC821B4993A0007ECF2 /* FridgeItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FridgeItemCell.xib; sourceTree = "<group>"; };
+		1B3B1BC921B4993A0007ECF2 /* FridgeItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FridgeItemCell.swift; sourceTree = "<group>"; };
+		1B3B1BCD21B49F0C0007ECF2 /* NewContainerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewContainerViewController.xib; sourceTree = "<group>"; };
+		1B3B1BCE21B49F0C0007ECF2 /* NewContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewContainerViewController.swift; sourceTree = "<group>"; };
+		1B3B1BD121B4A1830007ECF2 /* NewItemViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewItemViewController.xib; sourceTree = "<group>"; };
+		1B3B1BD221B4A1830007ECF2 /* NewItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewItemViewController.swift; sourceTree = "<group>"; };
 		1B530F4921B2566E0086B639 /* Animation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animation.swift; sourceTree = "<group>"; };
 		1B530F4A21B2566E0086B639 /* FadingAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FadingAnimation.swift; sourceTree = "<group>"; };
 		1B530F4B21B2566E0086B639 /* InteractiveTransitioner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InteractiveTransitioner.swift; sourceTree = "<group>"; };
@@ -126,6 +146,7 @@
 				1B22878D21B0F3A60027DC05 /* AppDelegate.swift */,
 				1B22879121B0F3A60027DC05 /* Main.storyboard */,
 				1B3B1BAF21B46E380007ECF2 /* Home */,
+				1B3B1BC321B489FC0007ECF2 /* Container */,
 				1B3B1BAE21B46E300007ECF2 /* Register */,
 				1B3B1BAD21B46E250007ECF2 /* Login */,
 				1B530F4821B256620086B639 /* Navigation */,
@@ -159,6 +180,10 @@
 			children = (
 				1B3B1BBB21B473AE0007ECF2 /* HomeViewController.xib */,
 				1B3B1BBC21B473AE0007ECF2 /* HomeViewController.swift */,
+				1B3B1BBF21B47D5F0007ECF2 /* ContainerCell.xib */,
+				1B3B1BC021B47D5F0007ECF2 /* ContainerCell.swift */,
+				1B3B1BCD21B49F0C0007ECF2 /* NewContainerViewController.xib */,
+				1B3B1BCE21B49F0C0007ECF2 /* NewContainerViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -174,6 +199,19 @@
 				1B22879921B0F3A70027DC05 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1B3B1BC321B489FC0007ECF2 /* Container */ = {
+			isa = PBXGroup;
+			children = (
+				1B3B1BC421B48A990007ECF2 /* ContainerViewController.xib */,
+				1B3B1BC521B48A990007ECF2 /* ContainerViewController.swift */,
+				1B3B1BC821B4993A0007ECF2 /* FridgeItemCell.xib */,
+				1B3B1BC921B4993A0007ECF2 /* FridgeItemCell.swift */,
+				1B3B1BD121B4A1830007ECF2 /* NewItemViewController.xib */,
+				1B3B1BD221B4A1830007ECF2 /* NewItemViewController.swift */,
+			);
+			path = Container;
 			sourceTree = "<group>";
 		};
 		1B530F4821B256620086B639 /* Navigation */ = {
@@ -249,8 +287,13 @@
 				1B3B1BB221B46F0A0007ECF2 /* LoginViewController.xib in Resources */,
 				1B3B1BB821B4711D0007ECF2 /* RegisterViewController.xib in Resources */,
 				1B22879821B0F3A70027DC05 /* LaunchScreen.storyboard in Resources */,
+				1B3B1BC121B47D5F0007ECF2 /* ContainerCell.xib in Resources */,
+				1B3B1BCA21B4993A0007ECF2 /* FridgeItemCell.xib in Resources */,
 				1B22879521B0F3A70027DC05 /* Assets.xcassets in Resources */,
 				1B22879321B0F3A60027DC05 /* Main.storyboard in Resources */,
+				1B3B1BCF21B49F0C0007ECF2 /* NewContainerViewController.xib in Resources */,
+				1B3B1BD321B4A1830007ECF2 /* NewItemViewController.xib in Resources */,
+				1B3B1BC621B48A990007ECF2 /* ContainerViewController.xib in Resources */,
 				1B3B1BBD21B473AE0007ECF2 /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -269,14 +312,19 @@
 				1B14308121B25A5900C5D4ED /* AuthResponse.swift in Sources */,
 				1B3B1BB921B4711D0007ECF2 /* RegisterViewController.swift in Sources */,
 				1B530F5121B2566E0086B639 /* NavigationController.swift in Sources */,
+				1B3B1BD021B49F0C0007ECF2 /* NewContainerViewController.swift in Sources */,
 				1B530F4F21B2566E0086B639 /* FadingAnimation.swift in Sources */,
 				1B3B1BAA21B44BE40007ECF2 /* Container.swift in Sources */,
 				1B3B1BA821B44B7A0007ECF2 /* FridgeItem.swift in Sources */,
 				1B14307A21B2578600C5D4ED /* UserSettings.swift in Sources */,
 				1B3B1BB521B470720007ECF2 /* UIVIewControllerExtension.swift in Sources */,
 				1B530F4E21B2566E0086B639 /* Animation.swift in Sources */,
+				1B3B1BD421B4A1830007ECF2 /* NewItemViewController.swift in Sources */,
+				1B3B1BC221B47D5F0007ECF2 /* ContainerCell.swift in Sources */,
 				1B530F5221B2566E0086B639 /* CoverRightAnimation.swift in Sources */,
+				1B3B1BCB21B4993A0007ECF2 /* FridgeItemCell.swift in Sources */,
 				1B14307F21B2599400C5D4ED /* RestAPI.swift in Sources */,
+				1B3B1BC721B48A990007ECF2 /* ContainerViewController.swift in Sources */,
 				1B3B1BB321B46F0A0007ECF2 /* LoginViewController.swift in Sources */,
 				1B3B1BAC21B44D1E0007ECF2 /* ContainerInfo.swift in Sources */,
 				1B14307721B2573D00C5D4ED /* UIViewExtension.swift in Sources */,

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NewContainerViewController" customModule="Fridge_Feed" customModuleProvider="target">
+            <connections>
+                <outlet property="nameTextField" destination="JX4-iS-Af6" id="MBp-zj-xA2"/>
+                <outlet property="typeTextField" destination="1sW-um-W99" id="fIo-Cw-JA4"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JX4-iS-Af6">
+                    <rect key="frame" x="75" y="52" width="225" height="30"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1sW-um-W99">
+                    <rect key="frame" x="75" y="98" width="225" height="30"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wT4-44-i83">
+                    <rect key="frame" x="170.5" y="144" width="34" height="30"/>
+                    <state key="normal" title="Save"/>
+                    <connections>
+                        <action selector="saveTap" destination="-1" eventType="touchUpInside" id="UBB-hB-k1u"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sBr-f8-0l4">
+                    <rect key="frame" x="163.5" y="190" width="48" height="30"/>
+                    <state key="normal" title="Cancel"/>
+                    <connections>
+                        <action selector="cancelTap" destination="-1" eventType="touchUpInside" id="evI-xJ-81U"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="JX4-iS-Af6" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.6" id="9H2-ad-vWp"/>
+                <constraint firstItem="1sW-um-W99" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="Aol-IS-cbZ"/>
+                <constraint firstItem="JX4-iS-Af6" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="32" id="NXu-Iu-4JJ"/>
+                <constraint firstItem="1sW-um-W99" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.6" id="Qwp-b1-4BX"/>
+                <constraint firstItem="sBr-f8-0l4" firstAttribute="top" secondItem="wT4-44-i83" secondAttribute="bottom" constant="16" id="Vde-kf-mBE"/>
+                <constraint firstItem="wT4-44-i83" firstAttribute="top" secondItem="1sW-um-W99" secondAttribute="bottom" constant="16" id="ZJF-cj-6wu"/>
+                <constraint firstItem="wT4-44-i83" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="Zcf-lS-soL"/>
+                <constraint firstItem="sBr-f8-0l4" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="eS0-j3-kDO"/>
+                <constraint firstItem="wT4-44-i83" firstAttribute="centerX" secondItem="1sW-um-W99" secondAttribute="centerX" id="gIO-jO-qEb"/>
+                <constraint firstItem="JX4-iS-Af6" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="qO6-v2-jNj"/>
+                <constraint firstItem="1sW-um-W99" firstAttribute="top" secondItem="JX4-iS-Af6" secondAttribute="bottom" constant="16" id="u6L-y0-2Yp"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="-521" y="10"/>
+        </view>
+    </objects>
+</document>

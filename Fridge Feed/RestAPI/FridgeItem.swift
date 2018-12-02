@@ -45,7 +45,6 @@ struct FridgeItem: Codable {
         var expiration: Date? = nil
         
         if let dateString = try container.decode(String?.self, forKey: .expiration) {
-            print(dateString)
             let formatter = DateFormatter()
             formatter.dateFormat = "MM/dd/yyyy"
             expiration = formatter.date(from: dateString)

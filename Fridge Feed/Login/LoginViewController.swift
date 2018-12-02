@@ -40,8 +40,8 @@ class LoginViewController: UIViewController {
         RestAPI.login(user: username,
                       password: password,
                       completionHandler: { [weak self] in
-                        let registerVC = HomeViewController()
-                        self?.navigationController?.pushViewController(registerVC, animated: true)
+                        let homeVC = HomeViewController()
+                        self?.navigationController?.viewControllers = [homeVC]
             }, errorHandler: handleError)
     }
     
