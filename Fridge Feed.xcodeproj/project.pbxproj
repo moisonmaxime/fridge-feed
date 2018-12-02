@@ -7,14 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B14307721B2573D00C5D4ED /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B14307621B2573D00C5D4ED /* UIViewExtension.swift */; };
+		1B14307A21B2578600C5D4ED /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B14307921B2578600C5D4ED /* UserSettings.swift */; };
+		1B14307D21B2579700C5D4ED /* URLRequestExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B14307C21B2579700C5D4ED /* URLRequestExtension.swift */; };
+		1B14307F21B2599400C5D4ED /* RestAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B14307E21B2599400C5D4ED /* RestAPI.swift */; };
+		1B14308121B25A5900C5D4ED /* AuthResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B14308021B25A5900C5D4ED /* AuthResponse.swift */; };
 		1B22878E21B0F3A60027DC05 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B22878D21B0F3A60027DC05 /* AppDelegate.swift */; };
 		1B22879021B0F3A60027DC05 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B22878F21B0F3A60027DC05 /* ViewController.swift */; };
 		1B22879321B0F3A60027DC05 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B22879121B0F3A60027DC05 /* Main.storyboard */; };
 		1B22879521B0F3A70027DC05 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B22879421B0F3A70027DC05 /* Assets.xcassets */; };
 		1B22879821B0F3A70027DC05 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B22879621B0F3A70027DC05 /* LaunchScreen.storyboard */; };
+		1B3B1BA621B44AAA0007ECF2 /* UserResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3B1BA521B44AAA0007ECF2 /* UserResponse.swift */; };
+		1B3B1BA821B44B7A0007ECF2 /* FridgeItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3B1BA721B44B7A0007ECF2 /* FridgeItem.swift */; };
+		1B3B1BAA21B44BE40007ECF2 /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3B1BA921B44BE40007ECF2 /* Container.swift */; };
+		1B3B1BAC21B44D1E0007ECF2 /* ContainerInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3B1BAB21B44D1E0007ECF2 /* ContainerInfo.swift */; };
+		1B530F4E21B2566E0086B639 /* Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B530F4921B2566E0086B639 /* Animation.swift */; };
+		1B530F4F21B2566E0086B639 /* FadingAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B530F4A21B2566E0086B639 /* FadingAnimation.swift */; };
+		1B530F5021B2566E0086B639 /* InteractiveTransitioner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B530F4B21B2566E0086B639 /* InteractiveTransitioner.swift */; };
+		1B530F5121B2566E0086B639 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B530F4C21B2566E0086B639 /* NavigationController.swift */; };
+		1B530F5221B2566E0086B639 /* CoverRightAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B530F4D21B2566E0086B639 /* CoverRightAnimation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1B14307621B2573D00C5D4ED /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		1B14307921B2578600C5D4ED /* UserSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
+		1B14307C21B2579700C5D4ED /* URLRequestExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLRequestExtension.swift; sourceTree = "<group>"; };
+		1B14307E21B2599400C5D4ED /* RestAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestAPI.swift; sourceTree = "<group>"; };
+		1B14308021B25A5900C5D4ED /* AuthResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthResponse.swift; sourceTree = "<group>"; };
 		1B22878A21B0F3A60027DC05 /* Fridge Feed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fridge Feed.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B22878D21B0F3A60027DC05 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1B22878F21B0F3A60027DC05 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +41,15 @@
 		1B22879421B0F3A70027DC05 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1B22879721B0F3A70027DC05 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1B22879921B0F3A70027DC05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1B3B1BA521B44AAA0007ECF2 /* UserResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserResponse.swift; sourceTree = "<group>"; };
+		1B3B1BA721B44B7A0007ECF2 /* FridgeItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FridgeItem.swift; sourceTree = "<group>"; };
+		1B3B1BA921B44BE40007ECF2 /* Container.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Container.swift; sourceTree = "<group>"; };
+		1B3B1BAB21B44D1E0007ECF2 /* ContainerInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerInfo.swift; sourceTree = "<group>"; };
+		1B530F4921B2566E0086B639 /* Animation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animation.swift; sourceTree = "<group>"; };
+		1B530F4A21B2566E0086B639 /* FadingAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FadingAnimation.swift; sourceTree = "<group>"; };
+		1B530F4B21B2566E0086B639 /* InteractiveTransitioner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InteractiveTransitioner.swift; sourceTree = "<group>"; };
+		1B530F4C21B2566E0086B639 /* NavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
+		1B530F4D21B2566E0086B639 /* CoverRightAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoverRightAnimation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +63,45 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1B14307421B2572300C5D4ED /* Custom UI */ = {
+			isa = PBXGroup;
+			children = (
+				1B14307521B2573100C5D4ED /* Views */,
+			);
+			path = "Custom UI";
+			sourceTree = "<group>";
+		};
+		1B14307521B2573100C5D4ED /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1B14307621B2573D00C5D4ED /* UIViewExtension.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1B14307821B2576100C5D4ED /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1B14307C21B2579700C5D4ED /* URLRequestExtension.swift */,
+				1B14307921B2578600C5D4ED /* UserSettings.swift */,
+				1B22879421B0F3A70027DC05 /* Assets.xcassets */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1B14307B21B2578800C5D4ED /* RestAPI */ = {
+			isa = PBXGroup;
+			children = (
+				1B14307E21B2599400C5D4ED /* RestAPI.swift */,
+				1B14308021B25A5900C5D4ED /* AuthResponse.swift */,
+				1B3B1BA521B44AAA0007ECF2 /* UserResponse.swift */,
+				1B3B1BA721B44B7A0007ECF2 /* FridgeItem.swift */,
+				1B3B1BA921B44BE40007ECF2 /* Container.swift */,
+				1B3B1BAB21B44D1E0007ECF2 /* ContainerInfo.swift */,
+			);
+			path = RestAPI;
+			sourceTree = "<group>";
+		};
 		1B22878121B0F3A60027DC05 = {
 			isa = PBXGroup;
 			children = (
@@ -55,13 +122,28 @@
 			isa = PBXGroup;
 			children = (
 				1B22878D21B0F3A60027DC05 /* AppDelegate.swift */,
-				1B22878F21B0F3A60027DC05 /* ViewController.swift */,
 				1B22879121B0F3A60027DC05 /* Main.storyboard */,
-				1B22879421B0F3A70027DC05 /* Assets.xcassets */,
 				1B22879621B0F3A70027DC05 /* LaunchScreen.storyboard */,
+				1B530F4821B256620086B639 /* Navigation */,
+				1B14307B21B2578800C5D4ED /* RestAPI */,
+				1B14307421B2572300C5D4ED /* Custom UI */,
+				1B14307821B2576100C5D4ED /* Supporting Files */,
+				1B22878F21B0F3A60027DC05 /* ViewController.swift */,
 				1B22879921B0F3A70027DC05 /* Info.plist */,
 			);
 			path = "Fridge Feed";
+			sourceTree = "<group>";
+		};
+		1B530F4821B256620086B639 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				1B530F4921B2566E0086B639 /* Animation.swift */,
+				1B530F4D21B2566E0086B639 /* CoverRightAnimation.swift */,
+				1B530F4A21B2566E0086B639 /* FadingAnimation.swift */,
+				1B530F4B21B2566E0086B639 /* InteractiveTransitioner.swift */,
+				1B530F4C21B2566E0086B639 /* NavigationController.swift */,
+			);
+			path = Navigation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,7 +217,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B3B1BA621B44AAA0007ECF2 /* UserResponse.swift in Sources */,
+				1B530F5021B2566E0086B639 /* InteractiveTransitioner.swift in Sources */,
+				1B14307D21B2579700C5D4ED /* URLRequestExtension.swift in Sources */,
+				1B14308121B25A5900C5D4ED /* AuthResponse.swift in Sources */,
+				1B530F5121B2566E0086B639 /* NavigationController.swift in Sources */,
 				1B22879021B0F3A60027DC05 /* ViewController.swift in Sources */,
+				1B530F4F21B2566E0086B639 /* FadingAnimation.swift in Sources */,
+				1B3B1BAA21B44BE40007ECF2 /* Container.swift in Sources */,
+				1B3B1BA821B44B7A0007ECF2 /* FridgeItem.swift in Sources */,
+				1B14307A21B2578600C5D4ED /* UserSettings.swift in Sources */,
+				1B530F4E21B2566E0086B639 /* Animation.swift in Sources */,
+				1B530F5221B2566E0086B639 /* CoverRightAnimation.swift in Sources */,
+				1B14307F21B2599400C5D4ED /* RestAPI.swift in Sources */,
+				1B3B1BAC21B44D1E0007ECF2 /* ContainerInfo.swift in Sources */,
+				1B14307721B2573D00C5D4ED /* UIViewExtension.swift in Sources */,
 				1B22878E21B0F3A60027DC05 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
