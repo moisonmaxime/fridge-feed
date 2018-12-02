@@ -12,7 +12,7 @@
         <!--Navigation Controller-->
         <scene sceneID="bXL-Fk-EOS">
             <objects>
-                <navigationController id="01h-Gl-O1V" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="Root" id="01h-Gl-O1V" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Try-OF-cus">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>

@@ -39,7 +39,7 @@ extension APIError {
         switch statusCode {
         case 403: return UserSettings.isLoggedIn ? .invalidAPIKey : .invalidCredentials
         case 500: return .server
-        case 404: return .notFound
+        case 400, 404: return .notFound // 400 is there because 'not found in user's stuff'
         case 422: return .notAcceptable
         default: return .unknown
         }

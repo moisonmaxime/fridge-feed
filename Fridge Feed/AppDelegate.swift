@@ -16,56 +16,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        //        UserSettings.accessKey = nil
+//        UserSettings.accessKey = nil
         
-        //        RestAPI.login(user: "maximaxof", password: "password", completionHandler: {}, errorHandler: { _ in })
+        let navigationController: UINavigationController? = self.window?.rootViewController as? UINavigationController
         
-        //        RestAPI.register(user: "maximaxof", password: "password", email: "max@me.com", name: "maxime", completionHandler: {
-        //            print("SUCCESS")
-        //        }, errorHandler: { error in
-        //            print("Error: \(error.message)")
-        //        })
+        let newVC: UIViewController
         
-        //        RestAPI.createContainer(name: "max's fridge", type: "some type of fridge", completionHandler: {
-        //            print("SUCCESS")
-        //        }, errorHandler: { error in
-        //            print("Error: \(error.message)")
-        //        })
-        
-        //        RestAPI.addItem(container: 1, name: "food", expiration: Date(), completionHandler: {
-        //            print("SUCCESS")
-        //        }, errorHandler: { error in
-        //            print("Error: \(error.message)")
-        //        })
-        
-//        RestAPI.updateContainer(id: 2, name: "new name", type: "new type", completionHandler: {
-//            print("SUCCESS")
-//        }, errorHandler: { error in
-//            print("Error: \(error.message)")
-//        })
-        
-        RestAPI.deleteContainer(id: 2, completionHandler: {
-            print("SUCCESS")
-        }, errorHandler: { error in
-            print("Error: \(error.message)")
-        })
-        
-        RestAPI.listContainers(completionHandler: { (containers) in
-            for container in containers {
-                print("\(container.id) - \(container.name)")
-            }
-        }) { (error) in
-            print(error.message)
+        if (UserSettings.isLoggedIn) {
+            newVC = HomeViewController()
+        } else {
+            newVC = LoginViewController()
         }
         
-        RestAPI.getContainer(id: 1, completionHandler: { (container) in
-            print(container)
-            for item in container.items {
-                print(item.expiration)
-            }
-        }) { (error) in
-            print(error.message)
-        }
+        navigationController?.viewControllers = [newVC]
         
         return true
     }

@@ -208,4 +208,54 @@ class RestAPI {
             DispatchQueue.main.async { completionHandler() }
         }, errorHandler: errorHandler)
     }
+    
+    static func updateItem(id: Int,
+                           name: String,
+                           brand: String?=nil,
+                           expiration: Date?=nil,
+                           calories: Int?=nil,
+                           quantity: Int?=nil,
+                           completionHandler: @escaping () -> Void,
+                           errorHandler: @escaping (APIError) -> Void) {
+        var postContent: [String: Encodable] = [
+            "name": name
+        ]
+        
+        if let brand = brand {
+            postContent["brand"] = brand
+        }
+        if let expiration = expiration {
+            let formatter = DateFormatter()
+            formatter.dateStyle = .short
+            formatter.timeStyle = .none
+            postContent["expiration"] = formatter.string(from: expiration)
+        }
+        if let calories = calories {
+            postContent["calories"] = calories
+        }
+        if let quantity = quantity {
+            postContent["quantity"] = quantity
+        }
+        
+        guard let request = URLRequest(url: API.item.url.appending("\(id)"), content: postContent, type: .PUT) else {
+            errorHandler(.internalError)
+            return
+        }
+        request.getJsonData(completionHandler: { _ in
+            DispatchQueue.main.async { completionHandler() }
+        }, errorHandler: errorHandler)
+    }
+    
+    static func deleteItem(id: Int,
+                           completionHandler: @escaping () -> Void,
+                           errorHandler: @escaping (APIError) -> Void) {
+       
+        guard let request = URLRequest(url: API.item.url.appending("\(id)"), type: .DELETE) else {
+            errorHandler(.internalError)
+            return
+        }
+        request.getJsonData(completionHandler: { _ in
+            DispatchQueue.main.async { completionHandler() }
+        }, errorHandler: errorHandler)
+    }
 }
