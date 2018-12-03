@@ -45,16 +45,16 @@ class HomeViewController: UIViewController {
         let logoutButton = UIBarButtonItem(barButtonSystemItem: .done,
                                            target: self,
                                            action: #selector(logout))
-        // Do any additional setup after loading the view.
+        navigationItem.leftBarButtonItems = [logoutButton]
     }
     
-    @objc func addContainer() {
+    @objc func logout() {
         UserSettings.logout()
         let loginVC = LoginViewController()
         navigationController?.viewControllers = [loginVC]
     }
     
-    @objc func logout() {
+    @objc func addContainer() {
         let newVC = NewContainerViewController()
         self.present(newVC, animated: true)
     }
