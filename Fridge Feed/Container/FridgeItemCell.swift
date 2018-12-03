@@ -21,7 +21,7 @@ class FridgeItemCell: UITableViewCell {
             if numberOfDays > 0 {
                 daysLeftLabel.text = "\(numberOfDays) days left"
             } else {
-                daysLeftLabel.text = "expired \(-numberOfDays) ago"
+                daysLeftLabel.text = "expired \(-numberOfDays) days ago"
             }
         } else {
             daysLeftLabel.text = ""
