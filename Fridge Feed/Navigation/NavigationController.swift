@@ -112,7 +112,7 @@ extension UINavigationController: UINavigationControllerDelegate {
             AnimationSettings.animationType = AnimationSettings.defaultAnimationType
         }
 
-        let duration = self.isNavigationBarHidden ? 0.4 : TimeInterval(UINavigationController.hideShowBarDuration)
+        let duration = self.isNavigationBarHidden ? 0.4 : TimeInterval(UINavigationController.hideShowBarDuration) + 0.4
 
         switch operation {
         case .push:

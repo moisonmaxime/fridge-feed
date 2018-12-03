@@ -51,6 +51,7 @@ class HomeViewController: UIViewController {
     @objc func logout() {
         UserSettings.logout()
         let loginVC = LoginViewController()
+        navigationController?.setAnimationType(type: FadingAnimation.self, forever: false)
         navigationController?.viewControllers = [loginVC]
     }
     

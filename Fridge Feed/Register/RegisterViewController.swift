@@ -25,8 +25,8 @@ class RegisterViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
+        hideKeyboardWhenTappedAround()
+        self.title = "Login"
     }
     
     @IBAction func registerTap() {
@@ -47,12 +47,15 @@ class RegisterViewController: UIViewController {
             return
         }
         
+        navigationController?.didStartLoading()
         RestAPI.register(user: username,
                          password: password,
                          email: email,
                          name: name,
                          completionHandler: { [weak self] in
+                            self?.navigationController?.didFinishLoading()
                             let homeVC = HomeViewController()
+                            self?.navigationController?.setAnimationType(type: FadingAnimation.self, forever: false)
                             self?.navigationController?.viewControllers = [homeVC]
             }, errorHandler: handleError)
     }

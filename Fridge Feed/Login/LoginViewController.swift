@@ -24,7 +24,7 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         hideKeyboardWhenTappedAround()
-        // Do any additional setup after loading the view.
+        self.title = "Login"
     }
     
     @IBAction func loginTap() {
@@ -37,10 +37,13 @@ class LoginViewController: UIViewController {
             return
         }
         
+        navigationController?.didStartLoading()
         RestAPI.login(user: username,
                       password: password,
                       completionHandler: { [weak self] in
+                        self?.navigationController?.didFinishLoading()
                         let homeVC = HomeViewController()
+                        self?.navigationController?.setAnimationType(type: FadingAnimation.self, forever: false)
                         self?.navigationController?.viewControllers = [homeVC]
             }, errorHandler: handleError)
     }
