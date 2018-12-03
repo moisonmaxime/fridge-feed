@@ -53,7 +53,6 @@ class RegisterViewController: UIViewController {
                          email: email,
                          name: name,
                          completionHandler: { [weak self] in
-                            self?.navigationController?.didFinishLoading()
                             let homeVC = HomeViewController()
                             self?.navigationController?.setAnimationType(type: FadingAnimation.self, forever: false)
                             self?.navigationController?.setViewControllers([homeVC], animated: true)

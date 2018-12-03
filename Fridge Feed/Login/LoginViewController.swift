@@ -41,7 +41,6 @@ class LoginViewController: UIViewController {
         RestAPI.login(user: username,
                       password: password,
                       completionHandler: { [weak self] in
-                        self?.navigationController?.didFinishLoading()
                         let homeVC = HomeViewController()
                         self?.navigationController?.setAnimationType(type: FadingAnimation.self, forever: false)
                         self?.navigationController?.setViewControllers([homeVC], animated: true)
