@@ -43,7 +43,7 @@ class ContainerViewController: UIViewController {
         
         let infoButton = UIBarButtonItem(barButtonSystemItem: .edit,
                                         target: self,
-                                        action: #selector(addItem))
+                                        action: #selector(editContainer))
         let addButton = UIBarButtonItem(barButtonSystemItem: .add,
                                         target: self,
                                         action: #selector(addItem))
@@ -52,12 +52,12 @@ class ContainerViewController: UIViewController {
     }
     
     @objc func addItem() {
-        let newVC = NewContainerViewController(container: container)
+        let newVC = NewItemViewController(containerID: containerID)
         self.present(newVC, animated: true)
     }
     
     @objc func editContainer() {
-        let newVC = NewItemViewController(containerID: containerID)
+        let newVC = NewContainerViewController(container: container)
         self.present(newVC, animated: true)
     }
     
