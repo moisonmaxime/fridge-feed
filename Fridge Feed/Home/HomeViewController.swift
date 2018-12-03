@@ -52,7 +52,7 @@ class HomeViewController: UIViewController {
         UserSettings.logout()
         let loginVC = LoginViewController()
         navigationController?.setAnimationType(type: FadingAnimation.self, forever: false)
-        navigationController?.viewControllers = [loginVC]
+        navigationController?.setViewControllers([loginVC], animated: true)
     }
     
     @objc func addContainer() {

@@ -20,15 +20,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let navigationController: UINavigationController? = self.window?.rootViewController as? UINavigationController
         
-        let newVC: UIViewController
+        let rootVC: UIViewController
         
         if (UserSettings.isLoggedIn) {
-            newVC = HomeViewController()
+            rootVC = HomeViewController()
         } else {
-            newVC = LoginViewController()
+            rootVC = LoginViewController()
         }
         
-        navigationController?.viewControllers = [newVC]
+        navigationController?.setViewControllers([rootVC], animated: false)
         
         return true
     }

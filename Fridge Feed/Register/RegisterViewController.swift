@@ -56,7 +56,7 @@ class RegisterViewController: UIViewController {
                             self?.navigationController?.didFinishLoading()
                             let homeVC = HomeViewController()
                             self?.navigationController?.setAnimationType(type: FadingAnimation.self, forever: false)
-                            self?.navigationController?.viewControllers = [homeVC]
+                            self?.navigationController?.setViewControllers([homeVC], animated: true)
             }, errorHandler: handleError)
     }
     
