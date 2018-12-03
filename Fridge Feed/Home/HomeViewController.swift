@@ -128,7 +128,7 @@ extension HomeViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let container = containers[indexPath.row]
-        let containerVC = ContainerViewController(containerID: container.id, name: container.name)
+        let containerVC = ContainerViewController(container: container)
         navigationController?.pushViewController(containerVC, animated: true)
     }
 }

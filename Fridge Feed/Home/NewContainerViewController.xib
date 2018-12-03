@@ -23,26 +23,26 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JX4-iS-Af6">
-                    <rect key="frame" x="75" y="52" width="225" height="30"/>
+                    <rect key="frame" x="75" y="66" width="225" height="30"/>
                     <nil key="textColor"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1sW-um-W99">
-                    <rect key="frame" x="75" y="98" width="225" height="30"/>
+                    <rect key="frame" x="75" y="112" width="225" height="30"/>
                     <nil key="textColor"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wT4-44-i83">
-                    <rect key="frame" x="170.5" y="144" width="34" height="30"/>
+                    <rect key="frame" x="325" y="20" width="34" height="30"/>
                     <state key="normal" title="Save"/>
                     <connections>
                         <action selector="saveTap" destination="-1" eventType="touchUpInside" id="UBB-hB-k1u"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sBr-f8-0l4">
-                    <rect key="frame" x="163.5" y="190" width="48" height="30"/>
+                    <rect key="frame" x="16" y="20" width="48" height="30"/>
                     <state key="normal" title="Cancel"/>
                     <connections>
                         <action selector="cancelTap" destination="-1" eventType="touchUpInside" id="evI-xJ-81U"/>
@@ -53,15 +53,14 @@
             <constraints>
                 <constraint firstItem="JX4-iS-Af6" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.6" id="9H2-ad-vWp"/>
                 <constraint firstItem="1sW-um-W99" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="Aol-IS-cbZ"/>
-                <constraint firstItem="JX4-iS-Af6" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="32" id="NXu-Iu-4JJ"/>
                 <constraint firstItem="1sW-um-W99" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.6" id="Qwp-b1-4BX"/>
-                <constraint firstItem="sBr-f8-0l4" firstAttribute="top" secondItem="wT4-44-i83" secondAttribute="bottom" constant="16" id="Vde-kf-mBE"/>
-                <constraint firstItem="wT4-44-i83" firstAttribute="top" secondItem="1sW-um-W99" secondAttribute="bottom" constant="16" id="ZJF-cj-6wu"/>
-                <constraint firstItem="wT4-44-i83" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="Zcf-lS-soL"/>
-                <constraint firstItem="sBr-f8-0l4" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="eS0-j3-kDO"/>
-                <constraint firstItem="wT4-44-i83" firstAttribute="centerX" secondItem="1sW-um-W99" secondAttribute="centerX" id="gIO-jO-qEb"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="wT4-44-i83" secondAttribute="trailing" constant="16" id="Yh8-qv-dIc"/>
+                <constraint firstItem="sBr-f8-0l4" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="dE9-lV-P6s"/>
+                <constraint firstItem="wT4-44-i83" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="hAH-FO-cev"/>
+                <constraint firstItem="sBr-f8-0l4" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="pmH-rq-USI"/>
                 <constraint firstItem="JX4-iS-Af6" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="qO6-v2-jNj"/>
                 <constraint firstItem="1sW-um-W99" firstAttribute="top" secondItem="JX4-iS-Af6" secondAttribute="bottom" constant="16" id="u6L-y0-2Yp"/>
+                <constraint firstItem="JX4-iS-Af6" firstAttribute="top" secondItem="sBr-f8-0l4" secondAttribute="bottom" constant="16" id="x8X-iM-79A"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="-521" y="10"/>

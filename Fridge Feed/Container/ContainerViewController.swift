@@ -13,13 +13,15 @@ class ContainerViewController: UIViewController {
     @IBOutlet weak var itemsTable: UITableView!
     
     let containerID: Int
+    let container: ContainerInfo
     
     var items: [FridgeItem] = []
     
-    init(containerID: Int, name: String) {
-        self.containerID = containerID
+    init(container: ContainerInfo) {
+        self.containerID = container.id
+        self.container = container
         super.init(nibName: nil, bundle: nil)
-        self.title = name.capitalized
+        self.title = container.name.capitalized
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -39,15 +41,24 @@ class ContainerViewController: UIViewController {
         let nib = UINib.init(nibName: "FridgeItemCell", bundle: nil)
         itemsTable.register(nib, forCellReuseIdentifier: "FridgeItemCell")
         
+        let infoButton = UIBarButtonItem(barButtonSystemItem: .edit,
+                                        target: self,
+                                        action: #selector(addItem))
         let addButton = UIBarButtonItem(barButtonSystemItem: .add,
                                         target: self,
                                         action: #selector(addItem))
-        navigationItem.rightBarButtonItems = [addButton]
+        navigationItem.rightBarButtonItems = [infoButton, addButton]
         // Do any additional setup after loading the view.
     }
     
     @objc func addItem() {
-        print("ADD")
+        let newVC = NewContainerViewController(container: container)
+        self.present(newVC, animated: true)
+    }
+    
+    @objc func editContainer() {
+        let newVC = NewItemViewController(containerID: containerID)
+        self.present(newVC, animated: true)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -120,8 +131,8 @@ extension ContainerViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        let container = items[indexPath.row]
-//        let containerVC = ContainerViewController(containerID: container.id, name: container.name)
-//        navigationController?.pushViewController(containerVC, animated: true)
+        let item = items[indexPath.row]
+        let newVC = NewItemViewController(containerID: containerID, item: item)
+        present(newVC, animated: true)
     }
 }
