@@ -16,6 +16,7 @@
 		1B22879321B0F3A60027DC05 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B22879121B0F3A60027DC05 /* Main.storyboard */; };
 		1B22879521B0F3A70027DC05 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B22879421B0F3A70027DC05 /* Assets.xcassets */; };
 		1B22879821B0F3A70027DC05 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B22879621B0F3A70027DC05 /* LaunchScreen.storyboard */; };
+		1B33D87121B4CB0C00105D77 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B33D87021B4CB0C00105D77 /* APIError.swift */; };
 		1B3B1BA621B44AAA0007ECF2 /* UserResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3B1BA521B44AAA0007ECF2 /* UserResponse.swift */; };
 		1B3B1BA821B44B7A0007ECF2 /* FridgeItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3B1BA721B44B7A0007ECF2 /* FridgeItem.swift */; };
 		1B3B1BAA21B44BE40007ECF2 /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3B1BA921B44BE40007ECF2 /* Container.swift */; };
@@ -56,6 +57,7 @@
 		1B22879421B0F3A70027DC05 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1B22879721B0F3A70027DC05 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1B22879921B0F3A70027DC05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1B33D87021B4CB0C00105D77 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		1B3B1BA521B44AAA0007ECF2 /* UserResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserResponse.swift; sourceTree = "<group>"; };
 		1B3B1BA721B44B7A0007ECF2 /* FridgeItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FridgeItem.swift; sourceTree = "<group>"; };
 		1B3B1BA921B44BE40007ECF2 /* Container.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Container.swift; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				1B14307E21B2599400C5D4ED /* RestAPI.swift */,
+				1B33D87021B4CB0C00105D77 /* APIError.swift */,
 				1B14308021B25A5900C5D4ED /* AuthResponse.swift */,
 				1B3B1BA521B44AAA0007ECF2 /* UserResponse.swift */,
 				1B3B1BA721B44B7A0007ECF2 /* FridgeItem.swift */,
@@ -328,6 +331,7 @@
 				1B3B1BB321B46F0A0007ECF2 /* LoginViewController.swift in Sources */,
 				1B3B1BAC21B44D1E0007ECF2 /* ContainerInfo.swift in Sources */,
 				1B14307721B2573D00C5D4ED /* UIViewExtension.swift in Sources */,
+				1B33D87121B4CB0C00105D77 /* APIError.swift in Sources */,
 				1B22878E21B0F3A60027DC05 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

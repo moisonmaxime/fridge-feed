@@ -40,7 +40,7 @@ class RestAPI {
      static func doSomething(completionHandler: @escaping ()->(), errorHandler: @escaping (APIError) -> ()) {
      let postContent:[String: Any] = [:]
      guard let request = URLRequest(url: API.login.url, content: postContent, type: .POST) else {
-     errorHandler(.internalError)
+     errorHandler(APIError(type: .internalError))
      return
      }
      request.getJsonData(completionHandler: { data in
@@ -55,12 +55,12 @@ class RestAPI {
                       errorHandler: @escaping (APIError) -> Void) {
         let postContent = ["username": user, "password": password]
         guard let request = URLRequest(url: API.login.url, content: postContent, type: .POST) else {
-            errorHandler(.internalError)
+            errorHandler(APIError(type: .internalError))
             return
         }
         request.getJsonData(completionHandler: { data in
             guard let loginResponse = try? JSONDecoder().decode(AuthResponse.self, from: data) else {
-                errorHandler(.internalError)
+                errorHandler(APIError(type: .internalError))
                 return
             }
             UserSettings.accessKey = loginResponse.accessKey
@@ -76,12 +76,12 @@ class RestAPI {
                          errorHandler: @escaping (APIError) -> Void) {
         let postContent = ["username": user, "password": password, "email": email, "name": name]
         guard let request = URLRequest(url: API.register.url, content: postContent, type: .POST) else {
-            errorHandler(.internalError)
+            errorHandler(APIError(type: .internalError))
             return
         }
         request.getJsonData(completionHandler: { data in
             guard let loginResponse = try? JSONDecoder().decode(AuthResponse.self, from: data) else {
-                errorHandler(.internalError)
+                errorHandler(APIError(type: .internalError))
                 return
             }
             UserSettings.accessKey = loginResponse.accessKey
@@ -98,12 +98,12 @@ class RestAPI {
     static func listContainers(completionHandler: @escaping ([ContainerInfo]) -> Void,
                                errorHandler: @escaping (APIError) -> Void) {
         guard let request = URLRequest(url: API.containers.url, type: .GET) else {
-            errorHandler(.internalError)
+            errorHandler(APIError(type: .internalError))
             return
         }
         request.getJsonData(completionHandler: { data in
             guard let containers = try? JSONDecoder().decode([ContainerInfo].self, from: data) else {
-                errorHandler(.internalError)
+                errorHandler(APIError(type: .internalError))
                 return
             }
             DispatchQueue.main.async { completionHandler(containers) }
@@ -114,12 +114,12 @@ class RestAPI {
                              completionHandler: @escaping (Container) -> Void,
                              errorHandler: @escaping (APIError) -> Void) {
         guard let request = URLRequest(url: API.containers.url.appending("\(id)"), type: .GET) else {
-            errorHandler(.internalError)
+            errorHandler(APIError(type: .internalError))
             return
         }
         request.getJsonData(completionHandler: { data in
             guard let container = try? JSONDecoder().decode(Container.self, from: data) else {
-                errorHandler(.internalError)
+                errorHandler(APIError(type: .internalError))
                 return
             }
             DispatchQueue.main.async { completionHandler(container) }
@@ -132,7 +132,7 @@ class RestAPI {
                                 errorHandler: @escaping (APIError) -> Void) {
         let postContent = ["name": name, "type": type]
         guard let request = URLRequest(url: API.containers.url, content: postContent, type: .POST) else {
-            errorHandler(.internalError)
+            errorHandler(APIError(type: .internalError))
             return
         }
         request.getJsonData(completionHandler: { _ in
@@ -147,7 +147,7 @@ class RestAPI {
                                 errorHandler: @escaping (APIError) -> Void) {
         let postContent = ["name": name, "type": type]
         guard let request = URLRequest(url: API.containers.url.appending("\(id)"), content: postContent, type: .PUT) else {
-            errorHandler(.internalError)
+            errorHandler(APIError(type: .internalError))
             return
         }
         request.getJsonData(completionHandler: { _ in
@@ -159,7 +159,7 @@ class RestAPI {
                                 completionHandler: @escaping () -> Void,
                                 errorHandler: @escaping (APIError) -> Void) {
         guard let request = URLRequest(url: API.containers.url.appending("\(id)"), type: .DELETE) else {
-            errorHandler(.internalError)
+            errorHandler(APIError(type: .internalError))
             return
         }
         request.getJsonData(completionHandler: { _ in
@@ -201,7 +201,7 @@ class RestAPI {
         }
         
         guard let request = URLRequest(url: API.item.url, content: postContent, type: .POST) else {
-            errorHandler(.internalError)
+            errorHandler(APIError(type: .internalError))
             return
         }
         request.getJsonData(completionHandler: { _ in
@@ -238,7 +238,7 @@ class RestAPI {
         }
         
         guard let request = URLRequest(url: API.item.url.appending("\(id)"), content: postContent, type: .PUT) else {
-            errorHandler(.internalError)
+            errorHandler(APIError(type: .internalError))
             return
         }
         request.getJsonData(completionHandler: { _ in
@@ -251,7 +251,7 @@ class RestAPI {
                            errorHandler: @escaping (APIError) -> Void) {
        
         guard let request = URLRequest(url: API.item.url.appending("\(id)"), type: .DELETE) else {
-            errorHandler(.internalError)
+            errorHandler(APIError(type: .internalError))
             return
         }
         request.getJsonData(completionHandler: { _ in

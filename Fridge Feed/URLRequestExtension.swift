@@ -8,44 +8,6 @@
 
 import Foundation
 
-// MARK: - API Error
-
-enum APIError {
-    case network
-    case server
-    case internalError
-    case invalidAPIKey
-    case invalidCredentials
-    case notFound
-    case notAcceptable
-    case unknown
-}
-
-extension APIError {
-    var message: String {
-        switch self {
-        case .network: return "Check your internet connection"             // internal
-        case .server: return "Oh my! Something went wrong"                 // http - 500
-        case .invalidAPIKey: return "Please sign in again"                      // http - 403
-        case .invalidCredentials: return "Invalid Credentials"                  // http - 403
-        case .internalError: return "Oops! Something went wrong"                // internal
-        case .notFound: return "Not Found"
-        case .notAcceptable: return "Invalid Input"
-        case .unknown: return "No clue, bud!"
-        }
-    }
-    
-    static func error(for statusCode: Int) -> APIError {
-        switch statusCode {
-        case 403: return UserSettings.isLoggedIn ? .invalidAPIKey : .invalidCredentials
-        case 500: return .server
-        case 400, 404: return .notFound // 400 is there because 'not found in user's stuff'
-        case 422: return .notAcceptable
-        default: return .unknown
-        }
-    }
-}
-
 // MARK: - URL Request
 
 extension URLRequest {
@@ -80,11 +42,13 @@ extension URLRequest {
                      errorHandler: @escaping (APIError) -> Void) {
         let task = URLSession.shared.dataTask(with: self) { data, response, error in
             guard let data = data, error == nil else {                                   // check for fundamental networking error
-                errorHandler(.network)
+                errorHandler(APIError(type: .network))
                 return
             }
             if let httpStatus = response as? HTTPURLResponse, httpStatus.statusCode != 200 {    // check for http errors
-                errorHandler(APIError.error(for: httpStatus.statusCode))
+                let errorType = APIErrorType.error(for: httpStatus.statusCode)
+//                let message = String(bytes: data, encoding: .utf8)?.capitalized
+                errorHandler(APIError(type: errorType))
                 return
             }
 
